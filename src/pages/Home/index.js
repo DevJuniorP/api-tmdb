@@ -1,24 +1,19 @@
 import { Container, MovieList, Movie } from "./styles";
+import { apikey } from "../../confi/key";
+import { useState, useEffect } from "react";
 
 const Home = () => {
 
-    const movies = [
-        {
-            id: 1,
-            title: 'Spider-Man',
-            image_url: 'https://tse4.mm.bing.net/th?id=OIP.gjIsgVxqtJgTrvpHvUMp_wHaK-&pid=Api&P=0&h=180',
-        },  
-        {
-            id: 2,
-            title: 'Batman',
-            image_url: 'https://tse4.mm.bing.net/th?id=OIP.gjIsgVxqtJgTrvpHvUMp_wHaK-&pid=Api&P=0&h=180',
-        },
-        {
-            id: 3,
-            title: 'Dracula',
-            image_url: 'https://tse4.mm.bing.net/th?id=OIP.gjIsgVxqtJgTrvpHvUMp_wHaK-&pid=Api&P=0&h=180',
-        }
-    ]
+    // eslint-disable-next-line
+    const [movies, setMovies] = useState([])
+
+    useEffect(() => {
+        //consumir API
+
+        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=5e26c577935e94516e7f507ce6f05e8f')
+        .then(response => response.json())
+        .then(data => console.log())
+    }, [])
 
     return(
         <Container>
