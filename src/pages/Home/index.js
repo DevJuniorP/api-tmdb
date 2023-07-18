@@ -4,15 +4,14 @@ import { useState, useEffect } from "react";
 
 const Home = () => {
 
-    // eslint-disable-next-line
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
         //consumir API
 
-        fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=5e26c577935e94516e7f507ce6f05e8f')
-        .then(response => response.json())
-        .then(data => console.log())
+        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=1`)
+            .then(res => res.json())
+            .then(data => console.log(data))
     }, [])
 
     return(
