@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { apikey } from "../../confi/key";
 
 import { Container } from "./styles";
@@ -39,7 +39,10 @@ const Details = () => {
                     <h1>{movie.title}</h1>
                     <span>Sinopse: {movie.sinopse}</span>
                     <span className="release-date">Data Lançamento: {movie.data_lancamento}</span>
-                    <button>Go Back</button>
+                    <Link to="/">
+                        <button>Go Back</button>
+                    </Link>
+
                 </div>
             </div>
         </Container>

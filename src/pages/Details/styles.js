@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    padding: 4rem 0;
+
     h1 {
         margin:  3rem 0;
     }
@@ -43,6 +45,11 @@ export const Container = styled.div`
     span{
         line-height: 130%;
         margin-bottom: 1rem;
+        font-size: 110%;
+    }
+
+    .release-date{
+        opacity: .5;
     }
 
 `
